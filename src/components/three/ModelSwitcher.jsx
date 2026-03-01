@@ -29,7 +29,7 @@ const ModelSwitcher = ({ scale, isMobile }) => {
     const smallMacbookRef = useRef();
     const largeMacbookRef = useRef();
 
-    const showLargeMacbook = scale === 0.08 || scale === 0.05;
+    const showLargeMacbook = scale == 0.08 || scale == 0.05;
 
     useGSAP(() => {
         if (showLargeMacbook) {
@@ -45,7 +45,6 @@ const ModelSwitcher = ({ scale, isMobile }) => {
             fadeMeshes(smallMacbookRef.current, 1);
             fadeMeshes(largeMacbookRef.current, 0);
         }
-
     }, [scale])
 
     const controlsConfig = {
