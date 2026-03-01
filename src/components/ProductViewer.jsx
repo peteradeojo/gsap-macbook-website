@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { useMacbookStore } from "./store";
+import { DARK_COLOR, LIGHT_COLOR, useMacbookStore } from "./store";
 import { Box, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import MacbookModel14 from "./models/Macbook-14";
@@ -22,9 +22,9 @@ const ProductViewer = () => {
             <div className="flex-center gap-5 mt-5">
                 <div className="color-control">
                     <div
-                        onClick={() => setColor('#adb5bd')} className={clsx('bg-neutral-300', color === '#adb5bd' && 'active')} />
+                        onClick={() => setColor(LIGHT_COLOR)} className={clsx('bg-neutral-300', color == LIGHT_COLOR && 'active')} />
                     <div
-                        onClick={() => setColor('#2e2c2e')} className={clsx('bg-neutral-900', color === '#2e2c2e' && 'active')} />
+                        onClick={() => setColor(DARK_COLOR)} className={clsx('bg-neutral-900', color == DARK_COLOR && 'active')} />
                 </div>
 
                 <div className="size-control">

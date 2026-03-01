@@ -27,7 +27,7 @@ export default function MacbookModel14(props) {
         }
       }
     })
-  }, [color]);
+  }, [color, scene]);
 
   const texture = useTexture('/screen.png');
 
